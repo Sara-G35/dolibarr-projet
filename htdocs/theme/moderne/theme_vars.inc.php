@@ -6,6 +6,7 @@
  * Copyright (C) 2012		Juanjo Menent			<jmenent@2byte.es>
  * Copyright (C) 2018       Ferran Marcet           <fmarcet@2byte.es>
  * Copyright (C) 2021-2023  Anthony Berton          <anthony.berton@bb2a.fr>
+ * Copyright (C) 2025		Sara Gautier          <sara.gautier@bb2a.fr>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,7 +33,9 @@
  */
 
 global $theme_bordercolor, $theme_datacolor, $theme_bgcolor, $theme_bgcoloronglet;
+//Couleur pour les bordures
 $theme_bordercolor = array(235, 235, 224);
+//Couleur pour les graphiques et diagrammes
 $theme_datacolor = array(array(137, 86, 161), array(60, 147, 183), array(250, 190, 80), array(80, 166, 90), array(190, 190, 100), array(91, 115, 247), array(140, 140, 220), array(190, 120, 120), array(115, 125, 150), array(100, 170, 20), array(150, 135, 125), array(85, 135, 150), array(150, 135, 80), array(150, 80, 150));
 if (!defined('ISLOADEDBYSTEELSHEET')) {	// File is run after an include of a php page, not by the style sheet, if the constant is not defined.
 	if (getDolGlobalString('MAIN_OPTIMIZEFORCOLORBLIND')) { // user is loaded by dolgraph.class.php
@@ -45,37 +48,44 @@ if (!defined('ISLOADEDBYSTEELSHEET')) {	// File is run after an include of a php
 	}
 }
 
+//Couleur dufond général du thème
 $theme_bgcolor = array(hexdec('F4'), hexdec('F4'), hexdec('F4'));
+//Couleur du fond des onglets
 $theme_bgcoloronglet = array(hexdec('DE'), hexdec('E7'), hexdec('EC'));
 
 // Colors
-$colorbackbody = '255,255,255';
-$colorbackhmenu1 = '38,60,92'; // topmenu
-//$colorbackvmenu1 = '250,250,250'; // vmenu
-$colorbackvmenu1 = '248,248,248'; // vmenu
-$colortopbordertitle1 = '215,215,215'; // top border of title
-$colorbacktitle1 = '241,241,241'; // title of tables,list
-$colorbacktabcard1 = '255,255,255'; // card
-$colorbacktabactive = '234,234,234';
+$colorbackbody = '255,255,255'; //Fond de la page
+$colorbackhmenu1 = '37,99,235'; // topmenu
+$colorbackvmenu1 = '248,248,248'; // Couleur de fond du menu vertical
+$colortopbordertitle1 = '215,215,215'; // Couleur de la bordure supérieur des titres
+$colorbacktitle1 = '230,240,255'; // Couleur des titres
+$colorbacktabcard1 = '255,255,255'; //Couleur de fond des fiches
+$colorbacktabactive = '234,234,234';// Couleur de fond des onglets actifs
 $colorbacklineimpair1 = '255,255,255'; // line impair
 $colorbacklineimpair2 = '255,255,255'; // line impair
 $colorbacklinepair1 = '252,252,252'; // line pair
 $colorbacklinepair2 = '252,252,252'; // line pair
-$colorbacklinepairhover = '240,242,249'; // line hover
-$colorbacklinepairchecked = '240,242,249'; // line checked
-$colorbacklinebreak = '248,247,244'; // line break
-$colortexttitlenotab = '35,135,140'; // 150,90,121 140,80,10 or 10,140,80  #875a7b  green=0,123,140, violet: 0,50,120
-$colortexttitlenotab2 = '100,0,100'; // 150,90,121 140,80,10 or 10,140,80  #875a7b  green=0,123,140, violet: 0,50,120
-$colortexttitle = '40, 40, 60';
-$colortexttitlelink = '10, 20, 100';
-$colortext = '0,0,0';
-$colortextlink = '10, 20, 100';
+$colorbacklinepairhover = '240,242,249'; // Couleur de fond au survol des lignes
+$colorbacklinepairchecked = '240,242,249'; // Couleur de fond des lignes cochées
+$colorbacklinebreak = '173,216,230'; // Couleur de fond des séparateur de lignes
+
+$colortexttitlenotab = '35,135,140'; // Couleur du texte des titres sans onglets
+$colortexttitlenotab2 = '100,0,100'; // Couleur secondaire du texte des titres sans onglets
+$colortexttitle = '40, 40, 60'; // Couleur du texte des titres
+$colortexttitlelink = '10, 20, 100'; // Couleur des liens du titre
+$colortext = '0,0,0'; // Couleur du texte général
+$colortextlink = '10, 20, 100'; // Couleur des liens
+
+//Taille de police
 $fontsize = '0.92em';
 $fontsizesmaller = '0.75em';
-$topMenuFontSize = '1.1em';
-$toolTipBgColor = 'rgba(255, 255, 255, 0.96)';
-$toolTipFontColor = '#333';
-$butactionbg = '150, 110, 162, 0.95';
+$topMenuFontSize = '1.4em';
+
+$toolTipBgColor = 'rgba(255, 255, 255, 0.96)'; // Couleur de fond des infobulles
+$toolTipFontColor = '#333';//Couleur du texte des infobulles
+
+//Boutons d'action
+$butactionbg = '16, 185, 129, 0.95';
 $textbutaction = '255, 255, 255';
 
 // text color
@@ -96,7 +106,7 @@ $badgeDanger    = '#af4705'; // See $textDanger
 $badgeDark      = '#343a40';
 $badgeLight     = '#f8f9fa';
 
-// badge color adjustment for color blind
+// badge color adjustment for color blind (pour les daltoniens)
 $colorblind_deuteranopes_badgeSuccess   = '#37de5d'; //! text color black
 $colorblind_deuteranopes_badgeSuccess_textColor7 = '#000';
 $colorblind_deuteranopes_badgeWarning   = '#e4e411';

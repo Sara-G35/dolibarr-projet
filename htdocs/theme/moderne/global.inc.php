@@ -3667,36 +3667,36 @@ form[name="addtime"] img.userphoto {
 /* ============================================================================== */
 
 div.vmenu, td.vmenu {
-      margin-<?php print $right; ?>: 2px;
-      position: relative;
-      float: left;
-      padding: 0px;
-      padding-bottom: 0px;
-      padding-top: 1px;
+	margin-<?php print $right; ?>: 2px;
+	position: relative;
+	float: left;
+	padding: 0px;
+	padding-bottom: 0px;
+	padding-top: 1px;
 }
 
 .vmenu {
-      width: <?php echo $leftmenuwidth; ?>px;
-      margin-left: 8px;
-      <?php if (GETPOST('optioncss', 'aZ09') == 'print') { ?>
-      display: none;
-      <?php } ?>
+	width: <?php echo $leftmenuwidth; ?>px;
+	margin-left: 8px;
+	<?php if (GETPOST('optioncss', 'aZ09') == 'print') { ?>
+	display: none;
+	<?php } ?>
 }
 
 /* Force vmenusearchselectcombo with type=text differently than without because beautify with select2 affect vmenusearchselectcombo differently */
 input.vmenusearchselectcombo[type=text] {
-      width: <?php echo $leftmenuwidth - 10; ?>px !important;
+	width: <?php echo $leftmenuwidth - 10; ?>px !important;
 }
 .vmenusearchselectcombo {
-      width: <?php echo $leftmenuwidth - 2; ?>px;
+	width: <?php echo $leftmenuwidth - 2; ?>px;
 }
 
 .menu_contenu {
-      padding-top: 3px;
-      padding-bottom: 3px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      width: <?php echo $leftmenuwidth - 12; ?>px;  /* reduced width to accommodate padding */
+	padding-top: 3px;
+	padding-bottom: 3px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: <?php echo $leftmenuwidth - 2; ?>px;				/* required to have overflow working. must be same than .menu_titre */
 }
 #menu_contenu_logo { /* padding-top: 0; */ }
 .companylogo { }
@@ -3704,213 +3704,176 @@ input.vmenusearchselectcombo[type=text] {
 .searchform input { font-size: 16px; }
 
 
-/* Styling for menu links - turning them into buttons */
 a.vmenu:link, a.vmenu:visited, a.vmenu:hover, a.vmenu:active, span.vmenu, span.vsmenu {
-      white-space: nowrap;
-      font-family: <?php print $fontlist ?>;
-      text-align: <?php print $left; ?>;
-      display: block;
-      padding: 10px 15px;
-      margin: 5px 0;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      background-color: rgba(248, 248, 248, 0.9);
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	white-space: nowrap; font-family: <?php print $fontlist ?>; text-align: <?php print $left; ?>;
 }
-
 a.vmenu:link, a.vmenu:visited, a.vmenu:hover, a.vmenu:active,
-span.vmenu, span.vmenu:link, span.vmenu:visited, span.vmenu:hover, span.vmenu:active {
-      font-weight: bold;
-}
-
-/* Hover effect for menu buttons */
-a.vmenu:hover, span.vmenu:hover {
-      background-color: rgba(37, 99, 235, 0.1);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-      transform: translateY(-2px);
-}
-
+span.vmenu, span.vmenu:link, span.vmenu:visited, span.vmenu:hover, span.vmenu:active { font-weight: bold;  }	/* bold = 600, 500 is ko with Edge on 1200x960 */
 span.vmenudisabled {
-      font-family: <?php print $fontlist ?>;
-      text-align: <?php print $left; ?>;
-      font-weight: bold;
-      color: #aaa;
-      margin-left: 4px;
-      white-space: nowrap;
-      opacity: 0.65;
+	/* bold = 600, 500 is ko with Edge on 1200x960 */
+	font-family: <?php print $fontlist ?>; text-align: <?php print $left; ?>; font-weight: bold; color: #aaa; margin-left: 4px; white-space: nowrap;
 }
-
 a.vmenu:link, a.vmenu:visited {
-      color: var(--colortextbackvmenu);
+	color: var(--colortextbackvmenu);
 }
 
-/* Sub menu styling */
-a.vsmenu:link, a.vsmenu:visited, a.vsmenu:hover, a.vsmenu:active, span.vsmenu {
-      font-family: <?php print $fontlist ?>;
-      text-align: <?php print $left; ?>;
-      color: var(--colortextbackvmenu);
-      margin: 1px 1px 1px 6px;
-      padding: 6px 10px;
-      border-radius: 6px;
-      display: block;
-      transition: all 0.3s ease;
+a.vsmenu:link, a.vsmenu:visited, a.vsmenu:hover, a.vsmenu:active, span.vmenu, span.vsmenu {
+	font-family: <?php print $fontlist ?>;
+	text-align: <?php print $left; ?>;
+	color: var(--colortextbackvmenu);
+	margin: 1px 1px 1px 6px;
 }
-
-/* Hover effect for submenu */
-a.vsmenu:hover {
-      background-color: rgba(37, 99, 235, 0.05);
-      transform: translateX(2px);
-}
-
-/* Active menu item styling */
-a.vmenu.active, a.vsmenu.active {
-      background-color: rgb(37, 99, 235);
-      color: white !important;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-}
-
 span.vsmenudisabled, font.vsmenudisabled {
-      font-family: <?php print $fontlist ?>;
-      text-align: <?php print $left; ?>;
-      color: #aaa;
-      white-space: nowrap;
-      opacity: 0.65;
+	font-family: <?php print $fontlist ?>;
+	text-align: <?php print $left; ?>;
+	color: #aaa;
+	white-space: nowrap;
 }
-
 a.vsmenu:link, a.vsmenu:visited {
-      color: var(--colortextbackvmenu);
-      white-space: nowrap;
+	color: var(--colortextbackvmenu);
+	white-space: nowrap;
 }
-
 span.vsmenudisabledmargin, font.vsmenudisabledmargin { margin: 1px 1px 1px 6px; }
 li a.vsmenudisabled, li.vsmenudisabled { color: #aaa !important; }
 
 a.help:link, a.help:visited, a.help:hover, a.help:active, span.help {
-      text-align: <?php print $left; ?>;
-      color: #aaa;
-      text-decoration: none;
+	text-align: <?php print $left; ?>; color: #aaa; text-decoration: none;
 }
-
 .helppresent, .helppresent:hover {
-      /* color: #f3e4ac !important; */
+	/* color: #f3e4ac !important; */
 }
-
 .helppresentcircle {
-      color: var(--colortextbackhmenu);
-      margin-<?php echo $left ?>: -4px;
-      display: inline-block;
-      font-size: x-small;
-      vertical-align: super;
-      opacity: 0.95;
-      transform: rotate(<?php echo($left == 'left' ? '55deg' : '305deg'); ?>);
+	/*
+	color: var(--colorbackhmenu1);
+	filter: invert(0.5);
+	*/
+	color: var(--colortextbackhmenu);
+	margin-<?php echo $left ?>: -4px;
+	display: inline-block;
+	font-size: x-small;
+	vertical-align: super;
+	opacity: 0.95;
+	transform: rotate(<?php echo($left == 'left' ? '55deg' : '305deg'); ?>);
 }
 
-/* Block styling */
-.vmenu div.blockvmenufirst, .vmenu div.blockvmenulogo, .vmenu div.blockvmenusearchphone, .vmenu div.blockvmenubookmarks {
-      border-top: 1px solid #BBB;
-      margin-bottom: 10px;
+.vmenu div.blockvmenufirst, .vmenu div.blockvmenulogo, .vmenu div.blockvmenusearchphone, .vmenu div.blockvmenubookmarks
+{
+	border-top: 1px solid #BBB;
 }
-
 a.vsmenu.addbookmarkpicto {
-      padding-right: 10px;
+	padding-right: 10px;
 }
-
-div.blockvmenusearchphone {
-border-bottom: none !important;
+div.blockvmenusearchphone
+{
+	border-bottom: none !important;
 }
-
-.vmenu div.blockvmenuend, .vmenu div.blockvmenulogo {
-      margin: 0 0 8px 2px;
+.vmenu div.blockvmenuend, .vmenu div.blockvmenulogo
+{
+	margin: 0 0 8px 2px;
 }
-
 .vmenu div.blockvmenusearch {
-      margin-top: 5px;
-      margin-bottom: 15px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+/*
+.vmenu div.blockvmenusearch {
+	border: 1px solid #888;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 0;
+	padding-right: 0;
+	border-radius: 6px;
+	box-sizing: border-box;
+	margin-left: 3px;
+	margin-left: 3px;
+}
+*/
+.vmenu div.blockvmenuend
+{
+	padding-bottom: 5px;
+}
+.vmenu div.blockvmenulogo
+{
+	padding-bottom: 10px;
+	padding-top: 0;
+}
+div.blockvmenubookmarks
+{
+	padding-top: 10px !important;
+	padding-bottom: 16px !important;
+}
+div.blockvmenupair, div.blockvmenuimpair, div.blockvmenubookmarks, div.blockvmenuend
+{
+	font-family: <?php print $fontlist ?>;
+	text-align: <?php print $left; ?>;
+	text-decoration: none;
+	padding-left: 5px;
+	padding-right: 1px;
+	padding-top: 4px;
+	padding-bottom: 7px;
+	margin: 0 0 0 2px;
+
+	color: var(--colortext);
+	background: var(--colorbackvmenu1);
+
+	border-left: 1px solid #AAA;
+	border-right: 1px solid #BBB;
 }
 
-.vmenu div.blockvmenuend {
-      padding-bottom: 5px;
-}
-
-.vmenu div.blockvmenulogo {
-      padding-bottom: 10px;
-      padding-top: 0;
-}
-
-div.blockvmenubookmarks {
-      padding-top: 10px !important;
-      padding-bottom: 16px !important;
-}
-
-div.blockvmenupair, div.blockvmenuimpair, div.blockvmenubookmarks, div.blockvmenuend {
-      font-family: <?php print $fontlist ?>;
-      text-align: <?php print $left; ?>;
-      text-decoration: none;
-      padding-left: 5px;
-      padding-right: 1px;
-      padding-top: 4px;
-      padding-bottom: 7px;
-      margin: 0 0 0 2px;
-      color: var(--colortext);
-      background: var(--colorbackvmenu1);
-      border-left: 1px solid #AAA;
-      border-right: 1px solid #BBB;
-      border-radius: 0 0 8px 8px;
-}
-
-div.blockvmenusearch {
-      font-family: <?php print $fontlist ?>;
-      color: #000000;
-      text-align: <?php print $left; ?>;
-      text-decoration: none;
-      margin: 1px 0px 0px 2px;
-      background: var(--colorbackvmenu1);
+div.blockvmenusearch
+{
+	font-family: <?php print $fontlist ?>;
+	color: #000000;
+	text-align: <?php print $left; ?>;
+	text-decoration: none;
+	margin: 1px 0px 0px 2px;
+	background: var(--colorbackvmenu1);
 }
 
 div.blockvmenusearch > form > div {
-      padding-top: 3px;
+	padding-top: 3px;
 }
-
 div.blockvmenusearch > form > div > label {
-      padding-right: 2px;
+	padding-right: 2px;
 }
 
-div.blockvmenuhelp {
+div.blockvmenuhelp
+{
 <?php if (empty($conf->dol_optimize_smallscreen)) { ?>
-      font-family: <?php print $fontlist ?>;
-      color: #000000;
-      text-align: center;
-      text-decoration: none;
-      padding-left: 0px;
-      padding-right: 6px;
-      padding-top: 3px;
-      padding-bottom: 3px;
-      margin: 4px 0px 0px 0px;
+	font-family: <?php print $fontlist ?>;
+	color: #000000;
+	text-align: center;
+	text-decoration: none;
+	padding-left: 0px;
+	padding-right: 6px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin: 4px 0px 0px 0px;
 <?php } else { ?>
-      display: none;
+	display: none;
 <?php } ?>
 }
 
+
 td.barre {
-      border-right: 1px solid #000000;
-      border-bottom: 1px solid #000000;
-      background: #b3c5cc;
-      font-family: <?php print $fontlist ?>;
-      color: #000000;
-      text-align: <?php print $left; ?>;
-      text-decoration: none;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	background: #b3c5cc;
+	font-family: <?php print $fontlist ?>;
+	color: #000000;
+	text-align: <?php print $left; ?>;
+	text-decoration: none;
 }
 
 td.barre_select {
-      background: #b3c5cc;
-      color: #000000;
+	background: #b3c5cc;
+	color: #000000;
 }
 
 td.photo {
-      background: #F4F4F4;
-      color: #000000;
-      border: 1px solid #bbb;
+	background: #F4F4F4;
+	color: #000000;
+	border: 1px solid #bbb;
 }
 
 /* ============================================================================== */

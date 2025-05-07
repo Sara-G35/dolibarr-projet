@@ -23,7 +23,7 @@
  */
 
 /**
- *	\file       htdocs/theme/eldy/theme_vars.inc.php
+ *	\file       htdocs/theme/moderne/theme_vars.inc.php
  *	\brief      File to declare variables of CSS style sheet
  *  \ingroup    core
  *
@@ -113,7 +113,7 @@ $colorblind_deuteranopes_badgeWarning   = '#e4e411';
 $colorblind_deuteranopes_badgeDanger    = $badgeDanger; // currently not tested with a color blind people so use default color
 
 /* default color for status : After a quick check, somme status can have opposite function according to objects
-*  So this badges status uses default value according to theme eldy status img
+*  So this badges status uses default value according to theme moderne status img
 *  TODO: use color definition vars above for define badges color status X -> example $badgeStatusValidate, $badgeStatusClosed, $badgeStatusActive ....
 */
 $badgeStatus0 = '#cbd3d3'; // draft

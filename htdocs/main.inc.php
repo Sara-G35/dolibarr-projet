@@ -1980,6 +1980,15 @@ function top_htmlhead($head, $title = '', $disablejs = 0, $disablehead = 0, $arr
 		$result = $hookmanager->executeHooks('addHtmlHeader', $parameters); // Note that $action and $object may have been modified by some hooks
 		print $hookmanager->resPrint; // Replace Title to show
 
+		
+		// Inclusion du hook pour CSS personnalisé
+if (file_exists(DOL_DOCUMENT_ROOT.'/theme/'.$conf->theme.'/custom-hook.php')) {
+    include_once DOL_DOCUMENT_ROOT.'/theme/'.$conf->theme.'/custom-hook.php';
+    if (function_exists('printHeader')) {
+        printHeader();
+    }
+}
+
 		print "</head>\n\n";
 	}
 

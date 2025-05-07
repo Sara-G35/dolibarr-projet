@@ -33386,3 +33386,9 @@ ENGINE=innodb;
 2025-04-30 09:43:25 DEBUG   ::1                7252        DoliDBMysqli::select_db database=dolibarr
 2025-04-30 09:43:25 WARNING ::1                7252        DoliDBMysqli::DoliDBMysqli You should set the $dolibarr_main_db_character_set and $dolibarr_main_db_collation for the PHP to the same as the database default, so to utf8mb4 or upgrade database default to utf8.
 2025-04-30 09:43:25 DEBUG   ::1                7252        Conf::setValues
+2025-05-07 07:32:45 DEBUG   ::1                6124        - check: Dolibarr install/upgrade process started
+2025-05-07 07:32:45 DEBUG   ::1                6124        check: conf file '../conf/conf.php' already defined
+2025-05-07 07:32:45 DEBUG   ::1                6124        DoliDBMysqli::connect host=localhost, port=0, login=root, passwd=--hidden--, name=
+2025-05-07 07:32:45 DEBUG   ::1                6124        DoliDBMysqli::select_db database=dolibarr
+2025-05-07 07:32:45 WARNING ::1                6124        DoliDBMysqli::DoliDBMysqli You should set the $dolibarr_main_db_character_set and $dolibarr_main_db_collation for the PHP to the same as the database default, so to utf8mb4 or upgrade database default to utf8.
+2025-05-07 07:32:45 DEBUG   ::1                6124        Conf::setValues

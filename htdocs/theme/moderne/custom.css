@@ -1,0 +1,88 @@
+/* custom.css - Style personnalisé pour le menu latéral gauche */
+
+/* Style principal pour les liens du menu */
+.vmenu a,
+.menu_contenu a,
+.leftmenu a,
+div.vmenu span.vsmenu,
+div.vmenu a.vsmenu {
+    display: block !important;
+    padding: 10px 15px !important;
+    margin: 5px 6px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    background-color: rgba(248, 248, 248, 0.95) !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Style pour liens du menu principal */
+.vmenu a.vmenu,
+.menu_contenu a.vmenu {
+    font-weight: bold !important;
+    color: #333 !important;
+}
+
+/* Effet au survol pour tous les liens */
+.vmenu a:hover,
+.menu_contenu a:hover,
+.leftmenu a:hover,
+div.vmenu span.vsmenu:hover,
+div.vmenu a.vsmenu:hover {
+    background-color: rgba(37, 99, 235, 0.1) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-2px) !important;
+    color: rgb(37, 99, 235) !important;
+}
+
+/* Style pour l'élément actif/sélectionné */
+.vmenu a.active,
+.vmenu a.active:hover,
+.menu_contenu a.active,
+.leftmenu a.active,
+div.vmenu a.vsmenu.active {
+    background-color: rgb(37, 99, 235) !important;
+    color: white !important;
+    font-weight: bold !important;
+}
+
+/* Style pour les sous-menus */
+div.vmenu a.vsmenu,
+div.vmenu span.vsmenu {
+    padding: 8px 10px 8px 15px !important;
+    margin: 3px 6px 3px 12px !important;
+    background-color: rgba(248, 248, 248, 0.8) !important;
+    font-weight: normal !important;
+    color: #444 !important;
+}
+
+/* Sections de menu */
+.vmenu div.blockvmenupair,
+.vmenu div.blockvmenuimpair,
+.vmenu div.blockvmenubookmarks,
+.vmenu div.blockvmenuend {
+    border-left: 1px solid #DDD !important;
+    border-right: 1px solid #DDD !important;
+    border-radius: 0 0 8px 8px !important;
+    background-color: #f8f8f8 !important;
+    padding-top: 8px !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+/* Espacement entre sections */
+.vmenu div.menu_titre {
+    margin-top: 10px !important;
+    margin-bottom: 5px !important;
+    padding-top: 5px !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Éléments désactivés */
+span.vmenudisabled,
+font.vsmenudisabled,
+li a.vsmenudisabled,
+li.vsmenudisabled {
+    opacity: 0.5 !important;
+    color: #999 !important;
+}
